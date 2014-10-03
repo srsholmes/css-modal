@@ -14,14 +14,16 @@ body {
 	display:  none;
 	position: absolute;
 	margin: auto;
-	top: 25%;
+	top: inherit;
 	bottom: 25%;
 	right: 25%;
 	left: 25%;
-	border: 3px solid black;
 	background: white;
-	padding: 20px;
 	text-align: center;
+	box-sizing: border-box;
+	min-height: inherit;
+	min-width: inherit;
+	transition: all (2s ease-in);
 
 	 &:before {
 		position: fixed;
@@ -43,11 +45,14 @@ body {
 }
 
  .modal-launcher:focus .modal {
-    display: block;  
+    display: block; 
+	margin: auto;
+	top: 540px;
+	min-height: 500px;
+	min-width: 500px; 
 }
 
 .close-button {
-    float: right;
     cursor: pointer;
     position: absolute;
     right: 10px;
