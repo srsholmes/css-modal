@@ -1,4 +1,4 @@
 css-modal
 ===============
 
-A pop up css modal using only css.
+A pop up modal using only css.
