@@ -9,6 +9,43 @@
 body {
 	font-family: arial;
 }
+//Example 1
+
+.modal-section {
+    display: none;
+	position: absolute;
+	margin: auto;
+	top: inherit;
+	bottom: 25%;
+	right: 25%;
+	left: 25%;
+	background: white;
+	text-align: center;
+	box-sizing: border-box;
+	min-height: inherit;
+	min-width: inherit;
+	transition: all (2s ease-in);
+
+	 &:before {
+		position: fixed;
+		background-color: rgba(0,0,0,0.6);
+		transition: background-color(2s ease-in);
+		content: " ";
+		display: block;
+		width: 100%;
+		height: 100%;
+		left: 0;
+		right: 0;
+		top: 0;
+		bottom: 0;
+		z-index: -5;
+    }
+}
+.modal-section:target {
+    display: block;
+}
+
+//Example 2
 
 .modal {
 	display:  none;
@@ -46,14 +83,8 @@ body {
 }
 
 .modal-launcher {
-	color: white;
-	height: 50px;
-	width: 300px;
 	top: 30px;
-	text-align: center;
-	margin: auto;
 	display: block;
-	background: rgba(0, 82, 255, 1);
 }
 .modal-launcher:focus {
     outline: none;
@@ -70,15 +101,17 @@ body {
 	min-width: 500px; 
 }
 
+
+//Close button
+
 .close-button {
     cursor: pointer;
     position: absolute;
     right: 10px;
     top: 10px;
     color: black;
+    text-decoration: none;
 }
-
-//Close button
 
 @font-face {
 	font-family: 'css-modal';
@@ -105,7 +138,6 @@ body {
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 }
-
 .icon-close:before {
 	content: "\e600";
 }

@@ -12,17 +12,25 @@
     <body>
 
         <div class="wrapper">
+            
+        <h1>CSS only modals</h1>
 
+        <h2>Example 1</h2>
 
-           <a class="modal-launcher" tabindex="1">   
+            <a href="#one">Modal one - This works quite well.</a>
+             <section class="modal-section" id="one">
+                <a href="#" class="close-button icon-close" tabindex="2"></a>
+                    <p>Put some stuff for the modal here</p>
+            </section>
+
+        <h2>Example 2 - Not so good. Purely for demo purposes.</h2>
+             <a class="modal-launcher" tabindex="1">   
                 Click here to open
                  <div class="modal">
                      <span class="close-button icon-close" tabindex="2"></span>
                     <p>Put some stuff for the modal here</p>
                 </div>
             </a>
-
-
         </div>
 
         <script src="../public/dist/prod.js"></script>
